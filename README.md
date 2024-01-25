@@ -12,12 +12,12 @@ config のローカルでの持ち方
 {
   "domain1": [
     {
-      "from": "https://qiita.com/question-trend",
+      "from": "https://qiita.com",
       "to": "https://team-lab.com"
     },
     {
-      "from": "https://qiita.com/question-trend",
-      "to": "https://team-lab.com"
+      "from": "https://qiita.com2",
+      "to": "https://team-lab.com2"
     }
   ]
 }
