@@ -42,13 +42,15 @@ const convertLink = async () => {
   }
 
   config.forEach(({ from, to }) => {
-    const targetTag = aTags.filter(({ href }) => href === from);
+    const targetTag = aTags.filter(({ href }) => href.startsWith(from));
 
     if (targetTag.length === 0) {
       return;
     }
 
-    targetTag.forEach((element) => element.setAttribute("href", to));
+    targetTag.forEach((element) =>
+      element.setAttribute("href", `${to}${element.href.replace(from, "")}`)
+    );
   });
 };
 
